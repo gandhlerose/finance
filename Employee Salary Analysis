@@ -1,0 +1,35 @@
+# Create sample data
+employee_id <- 1:10
+department <- c("Finance", "HR", "IT", "Finance", "Sales", "IT", "HR", "Sales", "Finance", "IT")
+years_experience <- c(2, 5, 3, 10, 8, 6, 4, 7, 12, 1)
+salary <- c(55000, 62000, 58000, 95000, 88000, 72000, 60000, 85000, 110000, 50000)
+
+# Combine into a data frame
+employees <- data.frame(employee_id, department, years_experience, salary)
+
+# View the dataset
+print(employees)
+
+# Summary statistics
+summary(employees)
+
+# Average salary by department
+avg_salary <- aggregate(salary ~ department, data = employees, FUN = mean)
+print(avg_salary)
+
+# Highest and lowest salary
+highest_salary <- employees[which.max(employees$salary), ]
+lowest_salary <- employees[which.min(employees$salary), ]
+
+cat("Highest Salary:\n")
+print(highest_salary)
+cat("Lowest Salary:\n")
+print(lowest_salary)
+
+# Correlation between years of experience and salary
+correlation <- cor(employees$years_experience, employees$salary)
+cat("Correlation between Experience and Salary:", correlation, "\n")
+
+# Identify employees above department average
+employees$above_avg <- with(employees, salary > ave(salary, department))
+print(employees)
