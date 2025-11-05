@@ -4,7 +4,7 @@ Welcome to my Finance Data Analysis Portfolio — a collection of projects that 
 Each project demonstrates how I apply data-driven thinking to solve real-world financial problems like budgeting, global market evaluation, and salary analysis.
 
 📊 Projects Overview
-🪙 1. Personal Budget Tracker (Python)
+1. Personal Budget Tracker (Python)
 
 A Python-based financial tracker that helps visualize and manage monthly spending habits.
 Key Features:
