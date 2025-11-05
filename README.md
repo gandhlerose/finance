@@ -1,25 +1,46 @@
-Welcome to my Python Finance Projects repository! This repository contains a collection of projects focused on financial analysis, budgeting, and data visualization, all implemented using Python.
+💰 Finance Data Projects
 
-📂 Repository Structure
+Welcome to my Finance Data Analysis Portfolio — a collection of projects that combine finance, data analytics, and programming using Python and R.
+Each project demonstrates how I apply data-driven thinking to solve real-world financial problems like budgeting, global market evaluation, and salary analysis.
 
-Budget Tracker – A console-based personal budget tracker to record income and expenses.
+📊 Projects Overview
+🪙 1. Personal Budget Tracker (Python)
 
-Financial Dashboard – Visualizes income, expenses, and profit over time using charts.
+A Python-based financial tracker that helps visualize and manage monthly spending habits.
+Key Features:
 
-Other Projects – Additional finance-related Python projects exploring calculations, savings, and financial data analysis.
+Tracks income and expenses by category
 
-🛠 Technologies Used
+Calculates savings and spending ratios
 
-Python 3.x
+Identifies trends over time using pandas
 
-Core Python Libraries: pandas, matplotlib, seaborn (for data visualization)
+Provides clear summaries to support better budgeting decisions
 
-🚀 Features Across Projects
+Tech Stack: Python, Pandas
 
-Track and manage income and expenses
+🌍 2. Global Market Data Analysis (Python)
 
-Generate financial summaries
+Analyzes stock market performance across major global regions — the U.S., Europe, and Asia — using simulated or real market data.
+Key Features:
 
-Visualize financial data using line and bar charts
+Aggregates and compares returns across indices
 
-Interactive menu-driven programs for user input
+Evaluates month-over-month market performance
+
+Identifies top-performing regions and trends
+
+Tech Stack: Python, Pandas
+
+💼 3. Employee Salary Analysis (R)
+
+An R-based data analysis project exploring employee salaries to uncover pay trends and insights.
+Key Features:
+
+Calculates average salaries by role and department
+
+Detects pay disparities or growth opportunities
+
+Visualizes data distribution using R’s built-in tools
+
+Tech Stack: R, Data Frames, Base R Functions
