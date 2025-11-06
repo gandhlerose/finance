@@ -1,36 +1,32 @@
 # Monte Carlo Simulation for Portfolio Risk and Performance
-# Rose Gandhle – Portfolio Project
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import yfinance as yf
 
-# ===========================
-# Step 1: Download historical stock data
-# ===========================
+
+# === Step 1: Download historical stock data ===
+
 tickers = ['AAPL', 'MSFT', 'GOOG', 'AMZN']  # Example portfolio
 start_date = '2022-01-01'
 end_date = '2025-01-01'
 
 data = yf.download(tickers, start=start_date, end=end_date)['Adj Close']
 
-# ===========================
-# Step 2: Compute daily returns
-# ===========================
+
+# === Step 2: Compute daily returns ===
+
 returns = data.pct_change().dropna()
 
-# ===========================
-# Step 3: Portfolio initialization
-# ===========================
+# === Step 3: Portfolio initialization ===
+
 initial_capital = 100000
 weights = np.array([0.25, 0.25, 0.25, 0.25])  # Equal allocation
 mean_returns = returns.mean()
 cov_matrix = returns.cov()
 
-# ===========================
-# Step 4: Monte Carlo Simulation Function
-# ===========================
+# === Step 4: Monte Carlo Simulation Function ===
 def monte_carlo_portfolio(weights, mean_returns, cov_matrix, num_simulations=1000, days=252):
     results = np.zeros((num_simulations, days))
     
@@ -49,14 +45,10 @@ def monte_carlo_portfolio(weights, mean_returns, cov_matrix, num_simulations=100
     
     return results
 
-# ===========================
-# Step 5: Run Simulation
-# ===========================
+# === Step 5: Run Simulation ===
 simulations = monte_carlo_portfolio(weights, mean_returns, cov_matrix, num_simulations=5000)
 
-# ===========================
-# Step 6: Visualization
-# ===========================
+# === Step 6: Visualization ===
 plt.figure(figsize=(14,7))
 plt.plot(simulations.T, color='blue', alpha=0.01)
 plt.title('Monte Carlo Simulation of Portfolio Performance (1 Year)')
@@ -65,9 +57,7 @@ plt.ylabel('Portfolio Value ($)')
 plt.grid(True)
 plt.show()
 
-# ===========================
-# Step 7: Simulation Metrics
-# ===========================
+# === Step 7: Simulation Metrics ===
 ending_values = simulations[:, -1]
 mean_end = np.mean(ending_values)
 median_end = np.median(ending_values)
