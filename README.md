@@ -41,6 +41,19 @@ Calculates average salaries by role and department
 
 Detects pay disparities or growth opportunities
 
+4. Portfolio Performance Analysis (Python)
+
+A Python-powered project that evaluates stock portfolio performance using return calculations, risk analysis, and data visualization.
+
+Key Features:
+
+Calculates individual asset returns and total portfolio performance
+
+Measures portfolio weights and each asset’s contribution to overall returns
+
+Identifies top and bottom performing assets based on return rate and impact
+
+Visualizes performance using clear, data-driven charts
 Visualizes data distribution using R’s built-in tools
 
 Tech Stack: R, Data Frames, Base R Functions
