@@ -54,6 +54,3 @@ Measures portfolio weights and each asset’s contribution to overall returns
 Identifies top and bottom performing assets based on return rate and impact
 
 Visualizes performance using clear, data-driven charts
-Visualizes data distribution using R’s built-in tools
-
-Tech Stack: R, Data Frames, Base R Functions
